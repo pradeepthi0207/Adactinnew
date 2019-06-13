@@ -1,0 +1,608 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "User should login with valid credentials.",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2153275928,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User Should Launch the browser.",
+            "match": {
+              "location": "AdactinStepDefinition.user_Should_Launch_the_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 219525358,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User enter email Address \"\u003cusername\u003e\".",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u003cusername\u003e",
+                  "offset": 26
+                }
+              ],
+              "location": "AdactinStepDefinition.user_enter_email_Address(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 162776760,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enter password \"\u003cpassword\u003e\".",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u003cpassword\u003e",
+                  "offset": 21
+                }
+              ],
+              "location": "AdactinStepDefinition.user_enter_password(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1034033356,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user click login.",
+            "match": {
+              "location": "AdactinStepDefinition.user_click_login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 56376845,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user check the name is valid or not.",
+            "match": {
+              "location": "AdactinStepDefinition.user_check_the_name_is_valid_or_not()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "User Should  verify whether the check-out date field accepts a later date than checkin date.",
+        "description": "",
+        "id": "adactin-application-login-scenarios.;user-should--verify-whether-the-check-out-date-field-accepts-a-later-date-than-checkin-date.;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 145749613,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User should select location \"Sydney\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sydney",
+                  "offset": 29
+                }
+              ],
+              "location": "AdactinStepDefinition.user_should_select_location(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 140711000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user shouls select hotel \"Hotel Creek\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hotel Creek",
+                  "offset": 26
+                }
+              ],
+              "location": "AdactinStepDefinition.user_shouls_select_hotel(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 157919086,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user should select room type \"Standard\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Standard",
+                  "offset": 30
+                }
+              ],
+              "location": "AdactinStepDefinition.user_should_select_room_type(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 98424416,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user select no.of rooms \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 25
+                }
+              ],
+              "location": "AdactinStepDefinition.user_select_no_of_rooms(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 263747347,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user enter check in date as today afetr seven days \"05/06/2019\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "05/06/2019",
+                  "offset": 52
+                }
+              ],
+              "location": "AdactinStepDefinition.user_enter_check_in_date_as_today_afetr_seven_days(String)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 225080316,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user enter check out date as today after five days \"03/06/2019\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "03/06/2019",
+                  "offset": 52
+                }
+              ],
+              "location": "AdactinStepDefinition.user_enter_check_out_date_as_today_after_five_days(String)"
+            },
+            "matchedColumns": [
+              5
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 112503615,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user should click the search button",
+            "match": {
+              "location": "AdactinStepDefinition.user_should_click_the_search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 22630698,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user verify that system gives an error that checkoutdate should be after checkin date.",
+            "match": {
+              "location": "AdactinStepDefinition.user_verify_that_system_gives_an_error_that_checkoutdate_should_be_after_checkin_date()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
+            "name": "@test1"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "User should login with valid credentials.",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 374807013,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User Should Launch the browser.",
+            "match": {
+              "location": "AdactinStepDefinition.user_Should_Launch_the_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 168559274,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User enter email Address \"\u003cusername\u003e\".",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u003cusername\u003e",
+                  "offset": 26
+                }
+              ],
+              "location": "AdactinStepDefinition.user_enter_email_Address(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 171812605,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User enter password \"\u003cpassword\u003e\".",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u003cpassword\u003e",
+                  "offset": 21
+                }
+              ],
+              "location": "AdactinStepDefinition.user_enter_password(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 774696869,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user click login.",
+            "match": {
+              "location": "AdactinStepDefinition.user_click_login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 44537644,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user check the name is valid or not.",
+            "match": {
+              "location": "AdactinStepDefinition.user_check_the_name_is_valid_or_not()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 66,
+        "name": "User Should  verify whether the check-out date field accepts a later date than checkin date.",
+        "description": "",
+        "id": "adactin-application-login-scenarios.;user-should--verify-whether-the-check-out-date-field-accepts-a-later-date-than-checkin-date.;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 157994542,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "User should select location \"Sydney\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sydney",
+                  "offset": 29
+                }
+              ],
+              "location": "AdactinStepDefinition.user_should_select_location(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 141719592,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user shouls select hotel \"Hotel Creek\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Hotel Creek",
+                  "offset": 26
+                }
+              ],
+              "location": "AdactinStepDefinition.user_shouls_select_hotel(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 131820142,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user should select room type \"Standard\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Standard",
+                  "offset": 30
+                }
+              ],
+              "location": "AdactinStepDefinition.user_should_select_room_type(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 138372631,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "user select no.of rooms \"2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 25
+                }
+              ],
+              "location": "AdactinStepDefinition.user_select_no_of_rooms(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 274382400,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "user enter check in date as today afetr seven days \"02/06/2019\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "02/06/2019",
+                  "offset": 52
+                }
+              ],
+              "location": "AdactinStepDefinition.user_enter_check_in_date_as_today_afetr_seven_days(String)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 224187477,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "user enter check out date as today after five days \"03/06/2019\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "03/06/2019",
+                  "offset": 52
+                }
+              ],
+              "location": "AdactinStepDefinition.user_enter_check_out_date_as_today_after_five_days(String)"
+            },
+            "matchedColumns": [
+              5
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 97553305,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "user should select noOfAdults \"1\".",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 31
+                }
+              ],
+              "location": "AdactinStepDefinition.user_should_select_noOfAdults(String)"
+            },
+            "matchedColumns": [
+              6
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 153745261,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "user should select noOfChildren \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 33
+                }
+              ],
+              "location": "AdactinStepDefinition.user_should_select_noOfChildren(String)"
+            },
+            "matchedColumns": [
+              7
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 945570808,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "user should click the search button",
+            "match": {
+              "location": "AdactinStepDefinition.user_should_click_the_search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 141325715,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "user Select the hotel",
+            "match": {
+              "location": "AdactinStepDefinition.user_Select_the_hotel()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 831854355,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "click on continue button.",
+            "match": {
+              "location": "AdactinStepDefinition.click_on_continue_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1471552022,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "Check the details",
+            "match": {
+              "location": "AdactinStepDefinition.check_the_details()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6445733574,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "click on logout",
+            "match": {
+              "location": "AdactinStepDefinition.click_on_logout()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 47100012,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "verify we have been logged out of the application",
+            "match": {
+              "location": "AdactinStepDefinition.verify_we_have_been_logged_out_of_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14222,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "user check no of rooms should be displayed and match with number of rooms in search hotel page",
+            "match": {
+              "location": "AdactinStepDefinition.user_check_no_of_rooms_should_be_displayed_and_match_with_number_of_rooms_in_search_hotel_page()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 43,
+            "name": "@test3"
+          }
+        ]
+      }
+    ],
+    "name": "Adactin Application Login Scenarios.",
+    "description": "",
+    "id": "adactin-application-login-scenarios.",
+    "keyword": "Feature",
+    "uri": "Adactin.feature"
+  }
+]

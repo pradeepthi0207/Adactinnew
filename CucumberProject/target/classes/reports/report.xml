@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="17.530093">
+<testcase classname="Adactin Application Login Scenarios." name="User Should  verify whether the check-out date field accepts a later date than checkin date." time="4.792754">
+<system-out><![CDATA[Given User Should Launch the browser........................................passed
+When User enter email Address "<username>"..................................passed
+And User enter password "<password>"........................................passed
+And user click login........................................................passed
+Then user check the name is valid or not....................................passed
+When User should select location "Sydney"...................................passed
+And user shouls select hotel "Hotel Creek"..................................passed
+And user should select room type "Standard".................................passed
+And user select no.of rooms "1".............................................passed
+And user enter check in date as today afetr seven days "05/06/2019".........passed
+And user enter check out date as today after five days "03/06/2019".........passed
+And user should click the search button.....................................passed
+Then user verify that system gives an error that checkoutdate should be after checkin date..passed
+]]></system-out>
+</testcase>
+<testcase classname="Adactin Application Login Scenarios." name="User Should  verify whether the check-out date field accepts a later date than checkin date. 2" time="12.737339">
+<system-out><![CDATA[Given User Should Launch the browser........................................passed
+When User enter email Address "<username>"..................................passed
+And User enter password "<password>"........................................passed
+And user click login........................................................passed
+Then user check the name is valid or not....................................passed
+When User should select location "Sydney"...................................passed
+And user shouls select hotel "Hotel Creek"..................................passed
+And user should select room type "Standard".................................passed
+And user select no.of rooms "2".............................................passed
+And user enter check in date as today afetr seven days "02/06/2019".........passed
+And user enter check out date as today after five days "03/06/2019".........passed
+And user should select noOfAdults "1".......................................passed
+And user should select noOfChildren "1".....................................passed
+And user should click the search button.....................................passed
+When user Select the hotel..................................................passed
+And click on continue button................................................passed
+When Check the details......................................................passed
+And click on logout.........................................................passed
+And verify we have been logged out of the application.......................passed
+And user check no of rooms should be displayed and match with number of rooms in search hotel page.passed
+]]></system-out>
+</testcase>
+</testsuite>

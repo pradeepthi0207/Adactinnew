@@ -1,0 +1,26 @@
+package Day2;
+
+import com.baseclass.BaseClass;
+
+public class StringPgm {
+	public static void main(String[] args) {
+		
+		String s="Welcome1 java",rev="",s2="";int vowel=0,nonvowel=0;
+		String[] s1=s.split(" ");
+		for(int i=0;i<s1.length;i++) {
+			s2=s1[i];
+		
+			if(s2==s1[1]) {
+			for(int j=s2.length()-1;j>=0;j--) {
+				rev=rev+s2.charAt(j);
+			}rev=rev+" ";
+			}
+			else
+			 {
+				for(int k=0;k<s2.length();k++) {
+					rev=rev+s2.charAt(k);}
+			}rev=rev+" ";
+	
+	}System.out.println(rev);
+
+}}

@@ -1,0 +1,25 @@
+package com.RunnerClass;
+
+
+import java.io.File;
+
+import com.Base.BaseClassM;
+
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+
+public class Hooks {
+@Before
+public void beforeHook() {
+	
+}
+@After
+public void afterHook(Scenario scenario) {
+	String status=scenario.getStatus();
+	System.out.println(status);
+if(status.contains("pass"))	{
+	String takescreenshot=BaseClassM.takeScreenShot(scenario.getName());
+}
+}
+}

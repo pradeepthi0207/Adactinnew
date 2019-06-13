@@ -1,0 +1,36 @@
+package com.RunnerClass;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
+
+import com.Adactin.helper.PropertyReaderManager;
+import com.Base.BaseClassM;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features="src\\test\\java\\Adactin1",
+glue="StepDefinition" ,dryRun=true,strict=true,monochrome=true,
+format= {"pretty"})
+public class TestRunner {
+	public static WebDriver driver;
+	
+	@BeforeClass
+	public static void browserInit() throws Throwable
+	{
+		String browserName = PropertyReaderManager.getInstance().getPr().getBrowserName();
+		System.out.println("the browser name: " +browserName );
+		driver=BaseClassM.getBrowser(browserName);
+	}
+	
+	@AfterClass
+	public static void browserclose()
+	{
+		driver.quit();
+	}
+	
+	
+}

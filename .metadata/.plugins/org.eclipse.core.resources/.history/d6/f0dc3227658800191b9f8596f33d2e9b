@@ -1,0 +1,18 @@
+package Day2;
+
+import com.baseclass.BaseClass;
+
+public class StringPgm {
+	public static void main(String[] args) {
+		
+		String s="Welcome1 java",rev="",s2="";int vowel=0,nonvowel=0;
+		String[] s1=s.split(" ");
+		for(int i=0;i<s1.length;i++) {
+			String t=s1[i];
+			for(int j=t.length()-1;j>=0;j--) {
+				rev=rev+t.charAt(j);
+			}System.out.println(rev);
+		}
+	}
+
+}

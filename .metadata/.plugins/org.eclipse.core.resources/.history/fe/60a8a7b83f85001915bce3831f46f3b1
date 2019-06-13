@@ -1,0 +1,21 @@
+package Adactin1;
+
+public class Snippet {
+	Scenario Outline: User Should  verify whether the check-out date field accepts a later date than checkin date.
+	When User should select location "<location>"
+	And user shouls select hotel "<hotel>"
+	And user should select room type "<roomtype>"
+	And user select no.of rooms "<noofrooms>"
+	And user enter check in date as today afetr seven days "<checkindate>"
+	And user enter check out date as today after five days "<checkoutdate>"
+	And user should select noOfAdults "<noOfAdults>".
+	And user should select noOfChildren..
+	And user should click the search button
+	And user check no of rooms should be displayed and match with number of rooms in search hotel page
+	
+	
+	Examples:
+	|location|hotel|roomtype|noofrooms|checkindate|checkoutdate|noOfAdults|
+	|Sydney|Hotel Creek|Standard|3|30/05/2019|31/05/2019|1|
+}
+

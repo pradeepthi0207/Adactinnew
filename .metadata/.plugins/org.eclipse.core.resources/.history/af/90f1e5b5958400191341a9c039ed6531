@@ -1,0 +1,19 @@
+package com.RunnerClass;
+
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
+
+import com.Base.BaseClassM;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features="src\\test\\java\\Adactinfeature",
+glue="AdactStepDefinition" ,dryRun=true,strict=true)
+public class AdactinRunner {
+	
+	
+	
+}

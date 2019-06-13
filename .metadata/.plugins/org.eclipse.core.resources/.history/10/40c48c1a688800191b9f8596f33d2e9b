@@ -1,0 +1,65 @@
+Feature: Adactin Application Login Scenarios.
+
+Background: User should login with valid credentials.
+Given User Should Launch the browser.
+When User enter email Address "<username>".
+And User enter password "<password>".
+And user click login.
+Then user check the name is valid or not.
+
+
+Scenario Outline: User Should  verify whether the check-out date field accepts a later date than checkin date.
+When User should select location "<location>"
+And user shouls select hotel "<hotel>"
+And user should select room type "<roomtype>"
+And user select no.of rooms "<noofrooms>"
+And user enter check in date as today afetr seven days "<checkindate>"
+And user enter check out date as today after five days "<checkoutdate>"
+And user should click the search button
+And user verify that system gives an error that checkoutdate should be after checkin date.
+
+Examples:
+|location|hotel|roomtype|noofrooms|checkindate|checkoutdate|
+|Sydney|Hotel Creek|Standard|1|05/06/2019|03/06/2019|
+
+Scenario Outline: User Should  verify whether the check-out date field accepts a later date than checkin date.
+When User should select location "<location>"
+And user shouls select hotel "<hotel>"
+And user should select room type "<roomtype>"
+And user select no.of rooms "<noofrooms>"
+And user enter check in date as today afetr seven days "<checkindate>"
+And user enter check out date as today after five days "<checkoutdate>"
+And user should select noOfAdults "<noOfAdults>".
+And user should select noOfChildren..
+And user should click the search button
+And user check no of rooms should be displayed and match with number of rooms in search hotel page
+
+
+Examples:
+|location|hotel|roomtype|noofrooms|checkindate|checkoutdate|noOfAdults|
+|Sydney|Hotel Creek|Standard|3|30/05/2019|31/05/2019|1|
+
+@test3
+Scenario Outline: User Should  verify whether the check-out date field accepts a later date than checkin date.
+When User should select location "<location>"
+And user shouls select hotel "<hotel>"
+And user should select room type "<roomtype>"
+And user select no.of rooms "<noofrooms>"
+And user enter check in date as today afetr seven days "<checkindate>"
+And user enter check out date as today after five days "<checkoutdate>"
+And user should select noOfAdults "<noOfAdults>".
+And user should select noOfChildren "<noOfChildren>"
+And user should click the search button
+When user Select the hotel 
+And click on continue button.
+When Check the details
+And click on logout 
+And verify we have been logged out of the application
+
+
+And user check no of rooms should be displayed and match with number of rooms in search hotel page
+
+
+Examples:
+|location|hotel|roomtype|noofrooms|checkindate|checkoutdate|noOfAdults|noOfChildren|
+|Sydney|Hotel Creek|Standard|2|02/06/2019|03/06/2019|1|1|

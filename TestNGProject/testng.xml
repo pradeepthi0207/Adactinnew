@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <groups>
+  <define name="both">
+  
+  <include name="spi"/>
+  <include name="inox"/>
+  </define>
+  <run><include name="both"></include>
+  </run>
+  </groups>
+  
+    <classes>
+    
+      <class name="com.TestNG.TestNGProject.Annotations">
+      <methods>
+      <exclude name="test3"></exclude>
+      </methods>
+      </class>
+      </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

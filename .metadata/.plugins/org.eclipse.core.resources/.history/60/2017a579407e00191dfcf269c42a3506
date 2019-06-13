@@ -1,0 +1,13 @@
+Feature: Automation Application Login Scenarios.
+Scenario: Verify User login With Valid Credentials.
+Given User Should Launch the Automation Application.
+When User Click the Signin Button.
+When User Enter the Email Address.
+And User Enter the Password.
+And User Enter the Click Button.
+When User  Should Check the name.
+And User Should Search text.
+And User Enter Click Button.
+When User Click on Img.
+When User Click on AddCart.
+And User Should Signout.

@@ -1,0 +1,190 @@
+package AdactStepDefinition;
+
+import org.junit.runner.Runner;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import com.Adactin.helper.PropertyReaderManager;
+import com.Adactin.pom.LoginPage;
+import com.Adactin.pom.PageObjectManager;
+import com.Adactin.pom.SearchHotel_Page;
+import com.Base.BaseClassM;
+import com.RunnerClass.AdactinRunner;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+
+public class AdactinStepDefinition extends BaseClassM {
+	
+	public static WebDriver driver=AdactinRunner.driver;
+	
+	PageObjectManager pom=new PageObjectManager(driver);
+
+@Given("^User Should Launch the browser\\.$")
+public void user_Should_Launch_the_browser() throws Throwable {
+	 try {
+		String s=PropertyReaderManager.getInstance().getPr().getUrl();
+		   
+		   geturl(s);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		throw new RuntimeException();
+	}
+}
+
+@When("^User enter email Address \"([^\"]*)\"\\.$")
+public void user_enter_email_Address(String arg1) throws Throwable {
+    inputValuestoWebelement(pom.getlog().getUsername(), PropertyReaderManager.getInstance().getPr().getUsername());
+
+}
+
+@When("^User enter password \"([^\"]*)\"\\.$")
+public void user_enter_password(String arg1) throws Throwable {
+    inputValuestoWebelement(pom.getlog().getPassword(), PropertyReaderManager.getInstance().getPr().getPassword());
+
+}
+
+
+@And("^user click login\\.$")
+public void user_click_login() throws Throwable {
+	LoginPage log=new LoginPage(driver);
+	   elementClick(log.getLogin());
+}
+
+@Then("^user check the name is valid or not\\.$")
+public void user_check_the_name_is_valid_or_not() throws Throwable {
+   SearchHotel_Page search=new SearchHotel_Page(driver);
+   String text = search.getUsername_show().getText();
+}
+
+
+@When("^User should select location \"([^\"]*)\"$")
+public void user_should_select_location(String location) throws Throwable {
+    selectDDusingValue(pom.getsearch().getLocation_dropdown(), location);
+}
+
+@When("^user shouls select hotel \"([^\"]*)\"$")
+public void user_shouls_select_hotel(String hotel) throws Throwable {
+   selectDDusingValue(pom.getsearch().getHotels_dropdown(), hotel);
+}
+
+@When("^user should select room type \"([^\"]*)\"$")
+public void user_should_select_room_type(String roomtype) throws Throwable {
+    selectDDusingValue(pom.getsearch().getRome_dropdown(), roomtype);
+}
+
+@When("^user select no\\.of rooms \"([^\"]*)\"$")
+public void user_select_no_of_rooms(String noofrooms) throws Throwable {
+   selectDDusingValue(pom.getsearch().getNoOfRoms_dropdown(), noofrooms);
+}
+
+@When("^user enter check in date as today afetr seven days \"([^\"]*)\"$")
+public void user_enter_check_in_date_as_today_afetr_seven_days(String checkindate) throws Throwable {
+	 elementClear(pom.getsearch().getCheckInDate_input());
+	   inputValuestoWebelement(pom.getsearch().getCheckInDate_input(), checkindate);
+	   String text1 = pom.getsearch().getCheckintext().getText();
+	   System.out.println(text1);
+}
+
+@When("^user enter check out date as today after five days \"([^\"]*)\"$")
+public void user_enter_check_out_date_as_today_after_five_days(String checkoutdate) throws Throwable {
+	 elementClear(pom.getsearch().getCheckoutDate_input());
+	   inputValuestoWebelement(pom.getsearch().getCheckoutDate_input(), checkoutdate);
+	  
+
+}
+
+@When("^user should click the search button$")
+public void user_should_click_the_search_button1s() throws Throwable {
+  elementClick(pom.getsearch().getSearch_click());
+}
+
+
+@Then("^user verify that system gives an error that checkoutdate should be after checkin date\\.$")
+public void user_verify_that_system_gives_an_error_that_checkoutdate_should_be_after_checkin_date() throws Throwable {
+	String text1 = pom.getsearch().getCheckintext().getText();
+	System.out.println(text1);
+	Assert.assertEquals(text1, "Check-In Date shall be before than Check-Out Date");
+    
+}
+
+
+@When("^user should select noOfAdults \"([^\"]*)\"\\.$")
+public void user_should_select_noOfAdults(String noOfAdults) throws Throwable {
+	selectDDusingValue(pom.getsearch().getAdultroom_dropdown(), noOfAdults);
+}
+
+@When("^user should select noOfChildren\\.\\.$")
+public void user_should_select_noOfChildren() throws Throwable {
+   
+}
+
+
+@When("^user should click the search button$")
+public void user_should_click_the_search_button() throws Throwable {
+  elementClick(pom.getsearch().getSearch_click());
+}
+
+
+@Then("^user check no of rooms should be displayed and match with number of rooms in search hotel page$")
+public void user_check_no_of_rooms_should_be_displayed_and_match_with_number_of_rooms_in_search_hotel_page() throws Throwable {
+    //String text = pom.getselect().getNoOfrooms().getText();
+   // System.out.println(text);
+  
+  
+}
+
+@When("^user should select noOfChildren \"([^\"]*)\"$")
+public void user_should_select_noOfChildren(String noOfChildren) throws Throwable {
+	selectDDusingValue(pom.getsearch().getChildroom_dropdown(), noOfChildren);
+	
+    
+}
+
+
+
+@When("^user Select the hotel$")
+public void user_Select_the_hotel() throws Throwable {
+    elementClick(pom.getselect().getRadiobtn());
+}
+
+@When("^click on continue button\\.$")
+public void click_on_continue_button() throws Throwable {
+   elementClick(pom.getselect().getContinuebtn());
+}
+
+@When("^Check the details$")
+public void check_the_details() throws Throwable {
+    inputValuestoWebelement(pom.getBooking().getFirstname(), "xyz");
+    inputValuestoWebelement(pom.getBooking().getLast_name(), "xyz");
+    inputValuestoWebelement(pom.getBooking().getAddress(), "xyx");
+    inputValuestoWebelement(pom.getBooking().getCc_num(), "1234567891234567");
+    selectDDusingValue(pom.getBooking().getCardtype(), "VISA");
+    selectDDusingValue(pom.getBooking().getExpirydate(), "1");
+    selectDDusingValue(pom.getBooking().getExpiryyear(), "2020");
+    inputValuestoWebelement(pom.getBooking().getCvv(), "123");
+    elementClick(pom.getBooking().getBook_nowbtn());
+}
+
+@When("^click on logout$")
+public void click_on_logout() throws Throwable {
+	elementClick(pom.getLogout().getLogout());
+}
+
+@When("^verify we have been logged out of the application$")
+public void verify_we_have_been_logged_out_of_the_application() throws Throwable {
+   try {
+	String logouttext = pom.getLogout().getLogouttext().getText();
+	   Assert.assertEquals("You have successfully logged out. Click here to login again",logouttext);
+} catch (Exception e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+	throw new Exception();
+}
+}
+
+}
